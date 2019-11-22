@@ -3,13 +3,16 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const app = express();
 
-require('dotenv').config();
+require("dotenv").config();
 
 //routes
 const recipes_routes = require("./routes/recipes");
 
 mongoose
-  .connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
   .then(() => {
     console.log("connected");
   })
@@ -32,6 +35,8 @@ app.use((req, res, next) => {
 });
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use("/api/recipes", recipes_routes);
 
 module.exports = app;

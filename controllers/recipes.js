@@ -1,6 +1,7 @@
 const Recipe = require("../models/recipe");
 
 const createRecipe = (req, res) => {
+  console.log(req.body);
   const recipe = new Recipe({
     title: req.body.title,
     ingredients: req.body.ingredients,
