@@ -21,29 +21,34 @@ describe("Recipe", () => {
             console.warn(err);
           }
           expect(response).to.have.status(200);
-          console.log(response.text);
           done();
         });
     });
-    it("it should create recipe", () => {
+    it("it should create recipe", done => {
       chai
         .request(app)
         .post(api_url)
         .set("Content-Type", "application/x-www-form-urlencoded")
-        .field()
+        .send({
+          title: "Rice Stew",
+          ingredients: "pepper, seasoning, ",
+          instructions: "fry pepper",
+          time: 2,
+          difficulty: 5
+        })
         .end((err, response) => {
           if (err) {
             console.warn(err);
           }
-          console.log(response.text);
+          const res = JSON.parse(response.text);
           expect(response).to.have.status(201);
-          expect(response).to.have.property("data");
-          expect(response.data).to.have.property("title");
-          expect(response.data).to.have.property("ingredients");
-          expect(response.data).to.have.property("instructions");
-          expect(response.data).to.have.property("time");
-          expect(response.data).to.have.property("difficulty");
-          recipeId = response.data ? response.data.id : "";
+          expect(res).to.have.property("data");
+          expect(res.data).to.have.property("title");
+          expect(res.data).to.have.property("ingredients");
+          expect(res.data).to.have.property("instructions");
+          expect(res.data).to.have.property("time");
+          expect(res.data).to.have.property("difficulty");
+          recipeId = res.data ? res.data.id : "";
           done();
         });
     });
