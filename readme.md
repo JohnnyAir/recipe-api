@@ -1,6 +1,7 @@
-# Express, Monogodb Api  
-[![Build Status](https://travis-ci.com/JohnnyAir/recipe-api.svg?branch=develop)](https://travis-ci.com/JohnnyAir/recipe-api)
-A simple node express recipe api
+[![Build Status](https://travis-ci.com/JohnnyAir/recipe-api.svg?branch=master)](https://travis-ci.com/JohnnyAir/recipe-api)
+
+# Express, Monogodb Api
+A simple node express recipe api 
 
 ## Development server
 Run `node server.js` or `npm run serve` if you have nodemon installed globally
