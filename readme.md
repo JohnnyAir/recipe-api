@@ -1,4 +1,5 @@
-# Express, Monogodb Api
+# Express, Monogodb Api  
+[![Build Status](https://travis-ci.com/JohnnyAir/recipe-api.svg?branch=develop)](https://travis-ci.com/JohnnyAir/recipe-api)
 A simple node express recipe api
 
 ## Development server
