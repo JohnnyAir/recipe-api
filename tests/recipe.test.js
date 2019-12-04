@@ -78,7 +78,7 @@ describe("Recipe", () => {
     it("it should change recipe info", done => {
       chai
         .request(app)
-        .post(`${api_url}/${recipeId}`)
+        .put(`${api_url}/${recipeId}`)
         .send({
           title: "Rice Stew",
           ingredients: "pepper, seasoning, ",
