@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/JohnnyAir/recipe-api.svg?branch=master)](https://travis-ci.com/JohnnyAir/recipe-api)
+[![Build Status](https://travis-ci.com/JohnnyAir/simple-recipe-api.svg?branch=master)](https://travis-ci.com/JohnnyAir/simple-recipe-api)
 <br>
 
 # Express, Monogodb Api
