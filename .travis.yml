@@ -1,6 +1,18 @@
 language: node_js
-node_js: 
-  - "stable"
+  node_js:
+    - stable
+
 cache:
   directories:
-    - "node_modules"
+    - node_modules
+
+branches:
+  only:
+    - master
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: Vups6xJmnEGMGi/b22bwzSQacVl9JwOyIr/uMNpCYErh5BKhe359dGdlQ96ac75YrFPsV5WUADe68UleBmsm/+qKfdXpomKLpUGypTY8c3dthW4DsIDxOF6rUckxfTMt2mbEPYCRfl0bi1wN2CoEhhauOI8ChkGff44jEcxwG/I3uLndV3GisIkWvqK+xEw7TBEkkQW7WjchRnpRhuv8xxlQq9BMl1VTlpEHJ/QjCzeITmop4JEM1nfYJV+egJuEto6ZxqFlFMA8kfO/fw3mbfXTSoSPZU54wBE3q518RDMGz2qrZtjUomdR3cLnvB4twPW1RUsD7iBHWTea6Fg2NtaaVK8MqRzQVBiytLxEY2yQLD4xUezraSWoGSNBu0aZwN1Ex2E0JgesC9pXO9OTMuFkFkXvqvTwAOZ4/O+1gzqyvVuWySRVaZuKb7Z1rUdxTmkmuf38Sk4dYgqYQvMyuGYGTSC5Praml9XYrG9jJ6maLHdLziG5twm3QkwU7au1iGtLKsH9u9FczApT8lRo+TU1wsnL+UtaRrsMghGVSn1EZlPF8o8WrgD+AOTJ7tFHQujnhiy61CpiAJFoYZxBTTPsE6Os9gikz4B88/wr/zIOmuTGh2LJ5tvMEmrbQyrtYDq3AItrEBfsoUbqVIQ6bnWzjKqs0/fB7n+N/u0qDh8=
+  app: 
+    master: srecipe-api
